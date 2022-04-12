@@ -6,7 +6,7 @@ A password manager built with bash
 To install ssh-mgr, you will first need to install AGC with:
 
 ``` shell
-git clone https://github.com/Hardwaregore/AutomaticGitCloner && cd AutomaticGitCloner && sudo chmod 777 * && mv agc.sh /bin && cd && rm -rf AutomaticGitCloner
+git clone https://github.com/Hardwaregore/AutomaticGitCloner && cd AutomaticGitCloner && sudo chmod 777 * && mv agc /bin && cd && rm -rf AutomaticGitCloner
 ```
 
 Then you will use AGC to install ssh-mgr:
