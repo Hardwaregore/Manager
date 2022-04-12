@@ -6,16 +6,16 @@ A password manager built with bash
 To install ssh-mgr, you will first need to install AGC with:
 
 ``` shell
-git clone https://github.com/Hardwaregore/AutomaticGitCloner && cd AutomaticGitCloner && sudo chmod 777 * && mv agc.sh ~ && cd && rm -rf AutomaticGitCloner
+git clone https://github.com/Hardwaregore/AutomaticGitCloner && cd AutomaticGitCloner && sudo chmod 777 * && mv agc.sh /bin && cd && rm -rf AutomaticGitCloner
 ```
 
 Then you will use AGC to install ssh-mgr:
 
 ``` shell
-bash agc.sh install ssh-mgr
+agc install ssh-mgr && cd ssh-mgr chmod 777 * && mv mgr /bin && cd ~ && rm -rf ssh-mgr 
 ```
 
-To use ssh-man, you must need a directory named passwords in the folder the shell script is stored in. To make one, use:
+To use ssh-mgr, you must need a directory named `passwords` in your home folder. To make one, use:
 
 ``` shell
 mkdir passwords
