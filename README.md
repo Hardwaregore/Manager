@@ -1,5 +1,5 @@
 # ssh-mgr
-A password manager built with bash
+A password manager built with bash and sql
 
 # How to install:
 
