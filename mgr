@@ -1,1 +1,36 @@
+#!/bin/bash
 
+red=`tput setaf 1`
+green=`tput setaf 2`
+yellow=`tput setaf 3`
+reset=`tput sgr0`
+
+time="bruh"
+
+
+
+checkinput = $(echo $2 | wc -c)
+
+if 
+
+if [ '$checkinput' -lt '1' ]; then
+
+  read -p "MGR login: " username
+  read -p "MGR password: " password
+  
+  getpasswd=$(mysql --user="mgr" --password="" --database="MGR" --execute="SELECT `password` FROM `users` WHERE username='$username';")
+  
+    if [ '$password' != $getpasswd ]; then
+    
+      printf "\n ${red}Account locked. Try again in $time seconds${reset} \n \n"
+      
+      else 
+  
+  printf "\n ${green}Welcome $username!${reset} \n \n"
+      fi
+  
+else
+  
+  echo "BRUH"
+  
+fi
