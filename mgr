@@ -5,32 +5,54 @@ green=`tput setaf 2`
 yellow=`tput setaf 3`
 reset=`tput sgr0`
 
-time="bruh"
 
-
-
-checkinput = $(echo $2 | wc -c)
-
-if 
-
-if [ '$checkinput' -lt '1' ]; then
-
-  read -p "MGR login: " username
-  read -p "MGR password: " password
+read -p "MGR login: " username
+read -p "MGR password: " password
   
-  getpasswd=$(mysql --user="mgr" --password="" --database="MGR" --execute="SELECT `password` FROM `users` WHERE username='$username';")
+getpasswd=$(mysql --user="mgr" --password="" --database="MGR" --execute="SELECT `password` FROM `users` WHERE username='$username';")
+
+addpasswd() {
+  echo ""  
+}
+
+getpasswd() {
+  echo ""
+}
+
+delpasswd() {
+  echo ""
+}
+
   
-    if [ '$password' != $getpasswd ]; then
+if [ '$password' != $getpasswd ]; then
     
-      printf "\n ${red}Account locked. Try again in $time seconds${reset} \n \n"
+  printf "\n ${red}Incorrect Password.${reset} \n \n"
+  exit 1
       
-      else 
+else 
   
   printf "\n ${green}Welcome $username!${reset} \n \n"
-      fi
   
-else
+  echo "[!] Please chose an option:"
+  echo ""
+  echo "[1] Add Password"
+  echo "[2] Get Password"
+  echo "[3] Delete Password"
   
-  echo "BRUH"
+  echo ""
+  echo ""
   
+  while true; do
+  read -p ">" choice1
+  
+  if [ $choice1 == "1" ]; then
+    addpasswd | break
+  elif [ $choice1 == "2" ]; then
+    getpasswd | break
+  elif [ $choice1 == "3" ]; then
+    delpasswd | break
+  else
+    echo "Invalid Option"
+  done
 fi
+  
