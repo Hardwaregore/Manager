@@ -36,7 +36,7 @@ else
   echo "[!] Please chose an option:"
   echo ""
   echo "[1] Add Password"
-  echo "[2] Get Password"
+  echo "[2] Read Password"
   echo "[3] Delete Password"
   
   echo ""
