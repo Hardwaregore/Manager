@@ -12,7 +12,14 @@ read -p "MGR password: " password
 getpasswd=$(mysql --user="mgr" --password="" --database="MGR" --execute="SELECT `password` FROM `users` WHERE username='$username';")
 
 addpasswd() {
-  echo ""  
+  clear
+  echo "Add a password:"
+  echo ""
+  read -p "Enter your Username: " siteuname
+  read -p "Enter your Password: " sitepasswd
+  echo ""
+  
+
 }
 
 getpasswd() {

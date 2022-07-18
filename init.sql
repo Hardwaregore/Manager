@@ -16,7 +16,7 @@ CREATE TABLE `users` (
 
 CREATE TABLE `accounts` (
   `id` int NOT NULL AUTO_INCRIMENT PRIMARY KEY,
-  `username/hostname` varchar(15) NOT NULL,
-  `password` varchar(30)
+  `siteusername` varchar(15) NOT NULL,
+  `sitepassword` varchar(30)
   
 );
